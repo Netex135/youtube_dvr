@@ -5,9 +5,8 @@ import numpy as np
 
 working_directory = ''
 channel_file = ''
-#Channle_id = 'UCSfoxYTlCPFfglckBLrjpsA'
 key = '' #api key
-#r = #urllib.request.urlopen('https://www.googleapis.com/youtube/v3/search?key='+ key +'&channelId=UCSfoxYTlCPFfglckBLrjpsA&part=snippet,id&order=date&maxResults=20')
+
 
 def search_videos(Channle_id): # gets the channel data
     r = urllib.request.urlopen('https://www.googleapis.com/youtube/v3/search?key=' + key + '&channelId=' + Channle_id + '&part=snippet,id&order=date&maxResults=30')
@@ -80,17 +79,6 @@ def download_live(video_id):
     print('placeholder')
 
 
-#channels = open("channels.txt","r")
-#lines = channels.read().split(',')
-#channels.close()
-#for x in range(len(lines)):
-#    print(lines[x])
-
-#a = np.array(['a',2,3,4,5,6]) # new values
-#b = np.array([1,4,'a']) # values to be compared
-#c=np.setdiff1d(a,b)
-#print(c)
-
 
 id = search_channel('disneyjunretior')
 if id == 0:
@@ -99,4 +87,4 @@ else:
     Videos = search_live_videos(id)
     Videos_id = filter_video_ids(Videos)
     print(Videos_id)
-#print(Videos.read())
+
