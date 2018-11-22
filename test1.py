@@ -6,7 +6,7 @@ import numpy as np
 working_directory = ''
 channel_file = ''
 #Channle_id = 'UCSfoxYTlCPFfglckBLrjpsA'
-key = 'AIzaSyAti3ZV0uI94wscFT51rxfvd5EMF5wbzhY' #api key
+key = '' #api key
 #r = #urllib.request.urlopen('https://www.googleapis.com/youtube/v3/search?key='+ key +'&channelId=UCSfoxYTlCPFfglckBLrjpsA&part=snippet,id&order=date&maxResults=20')
 
 def search_videos(Channle_id): # gets the channel data
