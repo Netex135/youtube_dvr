@@ -8,7 +8,7 @@ import time
 from multiprocessing import Pool
 from multiprocessing import Process
 
-dowload_directory = 'C:\\Users\\orcmi\\OneDrive\\Documents\\test\\' #directory of where to download Videos
+dowload_directory = '' #directory of where to download Videos
 working_directory = os.getcwd()
 seconds_for_download = 8000
 
