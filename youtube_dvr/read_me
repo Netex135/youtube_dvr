@@ -1,0 +1,6 @@
+This program uses yotube_dl to download videos and sorts them into their own files, live support is coming
+Download youtube_dl : sudo apt-get install youtube-dl
+Get api key here: console.developers.google.com/apis https://developers.google.com/youtube/v3/getting-started
+Enter your You Tube API key in the key file 
+Enter channels in this format: {'name': 'Id from link', 'name': 'id from link'}
+edit the python script download directory to were you want to download your videos
