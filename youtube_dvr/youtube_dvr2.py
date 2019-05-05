@@ -86,7 +86,7 @@ def compare_ids(downloaded_ids, current_ids):   #compares two arrays and return 
     difference = np.setdiff1d(current_ids,downloaded_ids)
     return(difference)
 
-def add_id(video_id):   #adds the downloaded id to the channle's filek
+def add_id(video_id):   #adds the downloaded id to the channle's file
     with open("downloaded_ids.txt", "a") as myfile:
         myfile.write(video_id + ",")
 
@@ -99,7 +99,10 @@ def download_video(video_id): #downloads video
         add_id(video_id)
         #subprocess.run(["youtube-dl","-f best", "https://www.youtube.com/watch?v=" + video_id])
     except:
-        print("could not download video")
+        try:
+            subprocess.run(["youtube-dl","-f best", "https://www.youtube.com/watch?v=" + video_id])
+        except:
+            print("could not download video")
 
 def download_live(video_id): #downloads live stream
     subprocess.run(["youtube-dl","-o '%(view_count)s.%(title)s.%(ext)s'", "-v -f 96/95/301/300 https://www.youtube.com/watch?v=" + video_id])
